@@ -19,7 +19,10 @@ describe('GetAllByUser', () => {
     const returned = await useCase.execute(userId);
 
     expect(getAllByUser).toBeCalledWith(userId, {
-      include: [{ association: 'skill' }]
+      include: [{
+        association: 'requestSkills',
+        include: [{ association: 'skill' }]
+      }]
     });
     expect(returned).toMatchObject(toReturn);
   });

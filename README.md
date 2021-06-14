@@ -44,3 +44,12 @@ In most cases, this will be only one, but in special cases, there is an option t
 Domain layer entities' interactions and relations are shown on the following diagram.
 
 ![4c4651a4-1d26-4cf8-9dcf-8a35b17a5c56](https://user-images.githubusercontent.com/11150288/121836819-8582b180-ccd4-11eb-9dc1-718c804b6aa5.png)
+
+
+
+# Improvments/Additions - Yet to be done
+[] Improve tests coverage
+[] Improve tests quality
+[] Add integration tests
+[] Add end-to-end tests by using `newman` + `postman collection`
+[] Separate all layers into separate libs which can be included in any project just by installing it.

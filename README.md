@@ -48,8 +48,8 @@ Domain layer entities' interactions and relations are shown on the following dia
 
 
 # Improvments/Additions - Yet to be done
-[] Improve tests coverage
-[] Improve tests quality
-[] Add integration tests
-[] Add end-to-end tests by using `newman` + `postman collection`
-[] Separate all layers into separate libs which can be included in any project just by installing it.
+- [] Improve tests coverage
+- [] Improve tests quality
+- [] Add integration tests
+- [] Add end-to-end tests by using `newman` + `postman collection`
+- [] Separate all layers into separate libs which can be included in any project just by installing it.

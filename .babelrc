@@ -1,0 +1,22 @@
+{
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  },
+  "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@application": "./src/application",
+        "@common": "./src/common",
+        "@domain": "./src/domain",
+        "@infrastructure": "./src/infrastructure",
+        "@documentation": "./src/documentation",
+        "@finance-models": "./src/infrastructure/orm/sequelize/financemodels"
+      }
+    }],
+    "@babel/plugin-proposal-class-properties"
+  ]
+}

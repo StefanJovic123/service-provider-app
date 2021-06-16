@@ -10,6 +10,6 @@ export default (services, cache) => ({
   SkillsUseCases: Skills(services.SkillsService),
   AuthUseCases: Auth(services.AuthService),
   RequestsUseCases: Requests(services.RequestsService),
-  UserSkillsUseCases: UserSkills(services.UserSkillsService),
+  UserSkillsUseCases: UserSkills(services.UserSkillsService, services.UsersService),
   RequestSkillsUseCases: RequestSkills(services.RequestSkillsService),
 });

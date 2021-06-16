@@ -6,6 +6,7 @@ import getAllByUser from '../requests/getAllByUser';
 import create from './create';
 import update from './update';
 import _delete from './delete';
+import completeProfile from './completeProfile';
 
 export default (
   { UserSkillsUseCases },
@@ -51,6 +52,16 @@ export default (
       Authenticate,
       cleanup.params,
       validate(validationSchemes.delete.byId, 'params'),
+    ],
+    environments: ['prod', 'dev', 'staging'],
+  },
+  {
+    handler: completeProfile(UserSkillsUseCases),
+    method: 'POST',
+    path: '/complete-profile',
+    middlewares: [
+      Authenticate,
+      validate(validationSchemes.create.completeProfile, 'body'),
     ],
     environments: ['prod', 'dev', 'staging'],
   },

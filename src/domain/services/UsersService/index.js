@@ -20,7 +20,7 @@ class UsersService extends Service {
     const passwordMatch = await compare(password, user.password);
 
     if (!passwordMatch) {
-      throw BadRequest('Invalid Password');
+      throw new BadRequest('Invalid Password');
     }
 
     const generator = new NodeJsonWebTokenJwtPort(config.General);

@@ -36,10 +36,6 @@ export default class Service {
    */
   async getAll(query, options) {
     const result = await this.repository.findAll(query, options);
-
-    console.log('options', options)
-    console.log('result !!!!!', result)
-
     return result;
   }
 
@@ -94,5 +90,15 @@ export default class Service {
    */
   async deleteById(id, softDelete = true, options) {
     return this.repository.delete({ id }, softDelete, options);
+  }
+
+  /**
+   * 
+   * @param {[Object]} instances
+   * @param {QueryOptions} options
+   * @returns {Promise<*>}
+   */
+  async bulkSave(instances, options) {
+    return this.repository.bulkSave(instances, options);
   }
 }

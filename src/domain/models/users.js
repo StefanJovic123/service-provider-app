@@ -4,7 +4,7 @@ const defaultFields = [
   'firstName',
   'lastName',
   'password',
-  'skillSet',
+  'skillsSet',
   'skills'
 ];
 

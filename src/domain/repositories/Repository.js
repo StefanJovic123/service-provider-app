@@ -118,7 +118,13 @@ export default class Repository {
   async bulkSave(instances = [], options = null) {
     const sanitized = bulkSanitize(instances, this.schemes.create.defaultFields);
 
-    const createdRecords = await this.model.bulkCreate(sanitized, options);
+    const createdRecords = [];
+    for (let i = 0; i < sanitized.length; i++) {
+      const snakeCaseInstance = instances[i];
+      const created = await this.model.create(snakeCaseInstance, options);
+
+      createdRecords.push(created);
+    }
     return bulkSanitize(createdRecords, this.schemes.create.returnFields);
   }
 

@@ -22,7 +22,7 @@ class RequestSkill extends Model {
       foreignKey: 'id',
     });
 
-    this.hasOne(models.Request, {
+    this.hasOne(models.Skill, {
       as: 'skill',
       sourceKey: 'skillId',
       foreignKey: 'id',
